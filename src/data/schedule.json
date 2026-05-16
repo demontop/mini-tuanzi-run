@@ -1,0 +1,92 @@
+[
+  {
+    "id": "race_001",
+    "name": "A组小组赛 上半场",
+    "trackId": "default_track",
+    "runnerIds": ["tuanzi_001", "tuanzi_002", "tuanzi_003", "tuanzi_004", "tuanzi_005", "tuanzi_006"],
+    "status": "SUPPORT_OPEN",
+    "supportCost": 100,
+    "seed": 10001
+  },
+  {
+    "id": "race_002",
+    "name": "A组小组赛 下半场",
+    "trackId": "loop_track",
+    "runnerIds": ["tuanzi_001", "tuanzi_002", "tuanzi_003", "tuanzi_004", "tuanzi_005", "tuanzi_006"],
+    "status": "LOCKED",
+    "supportCost": 100,
+    "seed": 10002
+  },
+  {
+    "id": "race_003",
+    "name": "B组小组赛 上半场",
+    "trackId": "default_track",
+    "runnerIds": ["tuanzi_007", "tuanzi_008", "tuanzi_009", "tuanzi_010", "tuanzi_011", "tuanzi_012"],
+    "status": "LOCKED",
+    "supportCost": 100,
+    "seed": 10003
+  },
+  {
+    "id": "race_004",
+    "name": "B组小组赛 下半场",
+    "trackId": "loop_track",
+    "runnerIds": ["tuanzi_007", "tuanzi_008", "tuanzi_009", "tuanzi_010", "tuanzi_011", "tuanzi_012"],
+    "status": "LOCKED",
+    "supportCost": 100,
+    "seed": 10004
+  },
+  {
+    "id": "race_005",
+    "name": "A组晋级赛",
+    "trackId": "default_track",
+    "runnerIds": ["tuanzi_001", "tuanzi_003", "tuanzi_004", "tuanzi_005", "tuanzi_006", "tuanzi_002"],
+    "status": "LOCKED",
+    "supportCost": 120,
+    "seed": 10005
+  },
+  {
+    "id": "race_006",
+    "name": "B组晋级赛",
+    "trackId": "default_track",
+    "runnerIds": ["tuanzi_007", "tuanzi_008", "tuanzi_009", "tuanzi_010", "tuanzi_011", "tuanzi_012"],
+    "status": "LOCKED",
+    "supportCost": 120,
+    "seed": 10006
+  },
+  {
+    "id": "race_007",
+    "name": "半决赛一",
+    "trackId": "loop_track",
+    "runnerIds": ["tuanzi_001", "tuanzi_004", "tuanzi_008", "tuanzi_010", "tuanzi_003", "tuanzi_012"],
+    "status": "LOCKED",
+    "supportCost": 140,
+    "seed": 10007
+  },
+  {
+    "id": "race_008",
+    "name": "半决赛二",
+    "trackId": "loop_track",
+    "runnerIds": ["tuanzi_002", "tuanzi_005", "tuanzi_006", "tuanzi_007", "tuanzi_009", "tuanzi_011"],
+    "status": "LOCKED",
+    "supportCost": 140,
+    "seed": 10008
+  },
+  {
+    "id": "race_009",
+    "name": "季军赛",
+    "trackId": "default_track",
+    "runnerIds": ["tuanzi_003", "tuanzi_006", "tuanzi_009", "tuanzi_012", "tuanzi_005", "tuanzi_010"],
+    "status": "LOCKED",
+    "supportCost": 160,
+    "seed": 10009
+  },
+  {
+    "id": "race_010",
+    "name": "冠军赛",
+    "trackId": "loop_track",
+    "runnerIds": ["tuanzi_001", "tuanzi_004", "tuanzi_008", "tuanzi_011", "tuanzi_002", "tuanzi_007"],
+    "status": "LOCKED",
+    "supportCost": 180,
+    "seed": 10010
+  }
+]

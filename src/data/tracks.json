@@ -1,0 +1,32 @@
+[
+  {
+    "id": "default_track",
+    "name": "庆典赛道",
+    "length": 32,
+    "layout": "horizontal",
+    "cells": [
+      { "index": 0, "type": "START" },
+      { "index": 4, "type": "BOOST", "steps": 1 },
+      { "index": 8, "type": "SLOW", "steps": -1 },
+      { "index": 12, "type": "REWARD" },
+      { "index": 16, "type": "RANDOM_EVENT" },
+      { "index": 24, "type": "BOOST", "steps": 2 },
+      { "index": 31, "type": "FINISH" }
+    ]
+  },
+  {
+    "id": "loop_track",
+    "name": "花火环道",
+    "length": 36,
+    "layout": "horizontal",
+    "cells": [
+      { "index": 0, "type": "START" },
+      { "index": 5, "type": "BOOST", "steps": 2 },
+      { "index": 10, "type": "RANDOM_EVENT" },
+      { "index": 15, "type": "SLOW", "steps": -2 },
+      { "index": 20, "type": "BOOST", "steps": 1 },
+      { "index": 27, "type": "REWARD" },
+      { "index": 35, "type": "FINISH" }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "stackMoveMode": "CARRY_ABOVE",
+  "finishMode": "ALL",
+  "maxRounds": 80,
+  "initialPopularity": 1000,
+  "saveKey": "mini_tuanzi_run_save_v1",
+  "danmaku": [
+    "冲冲冲！",
+    "这个技能太关键了！",
+    "要反超了吗？",
+    "前方团子危险！",
+    "最后冲刺！",
+    "冠军诞生！"
+  ]
+}

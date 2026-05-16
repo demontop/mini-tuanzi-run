@@ -1,0 +1,539 @@
+:root {
+  color-scheme: light;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei",
+    sans-serif;
+  color: #25314f;
+  background: #f6f8fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --panel: #ffffff;
+  --line: rgba(37, 49, 79, 0.12);
+  --primary: #f45b69;
+  --secondary: #2f80ed;
+  --green: #27ae60;
+  --yellow: #f2c94c;
+  --ink: #25314f;
+  --muted: #667085;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 12px clamp(16px, 4vw, 44px);
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+
+.brand,
+.app-header nav button,
+.ghost-danger {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.app-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.app-header nav button {
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.app-header nav button:hover,
+.brand:hover {
+  background: rgba(47, 128, 237, 0.08);
+}
+
+.ghost-danger {
+  color: #b42318;
+}
+
+main {
+  width: min(1180px, calc(100vw - 28px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.page-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.page-head h1 {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 54px);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.metric-band,
+.focus-race,
+.support-head,
+.room-panel,
+.race-panel,
+.reward-row,
+.race-row,
+.runner-choice {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.metric-band {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  overflow: hidden;
+}
+
+.metric-band div {
+  padding: 20px;
+  background: linear-gradient(180deg, #ffffff, #fbfcff);
+}
+
+.metric-band span {
+  display: block;
+  color: var(--muted);
+}
+
+.metric-band strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 34px;
+}
+
+.focus-race,
+.support-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px;
+}
+
+.focus-race h2,
+.support-head h2,
+.room-panel h2,
+.race-panel h2,
+.runner-choice h2,
+.reward-row h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  letter-spacing: 0;
+}
+
+.action-row,
+.toolbar-line,
+.cheer-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.toolbar-line {
+  margin-bottom: 16px;
+}
+
+.btn,
+.icon-btn {
+  min-height: 38px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-weight: 800;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn.secondary {
+  background: #eef5ff;
+  color: #1455a3;
+  border-color: rgba(47, 128, 237, 0.16);
+}
+
+.icon-btn {
+  width: 42px;
+  padding: 0;
+  background: #f5f7fb;
+  color: var(--ink);
+}
+
+.icon-btn.active {
+  background: var(--secondary);
+  color: white;
+}
+
+.shortcut-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.shortcut-grid .btn {
+  min-height: 64px;
+}
+
+.race-list,
+.runner-grid,
+.ranking-list {
+  display: grid;
+  gap: 12px;
+}
+
+.race-row {
+  display: grid;
+  grid-template-columns: 58px 1fr minmax(260px, auto);
+  gap: 16px;
+  padding: 16px;
+  align-items: center;
+}
+
+.race-number,
+.rank-index {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: #fff3d6;
+  color: #7a4f00;
+  font-weight: 900;
+}
+
+.race-row-main h2 {
+  margin: 0 0 6px;
+}
+
+.runner-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.runner-token {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 24px;
+  margin-right: 4px;
+  white-space: nowrap;
+}
+
+.runner-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--runner-color);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.72);
+}
+
+.runner-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.runner-choice {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 16px;
+}
+
+.runner-choice.selected {
+  border-color: rgba(244, 91, 105, 0.55);
+  box-shadow: 0 0 0 3px rgba(244, 91, 105, 0.12);
+}
+
+.runner-avatar {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--runner-color);
+  color: white;
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.race-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 14px;
+}
+
+.race-canvas {
+  min-height: 360px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.race-sidebar,
+.split-list,
+.multiplayer-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.race-panel {
+  padding: 16px;
+}
+
+.race-panel.compact h2 {
+  font-size: 20px;
+}
+
+.race-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.rank-row {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  gap: 9px;
+  align-items: center;
+  min-height: 42px;
+  border-bottom: 1px solid var(--line);
+}
+
+.rank-row.wide {
+  grid-template-columns: auto minmax(180px, 1fr) repeat(3, auto);
+  padding: 10px 14px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.live-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.event-log {
+  min-height: 112px;
+  max-height: 240px;
+  overflow: auto;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.event-log p {
+  margin: 0;
+  padding: 6px 0;
+  border-bottom: 1px dashed rgba(37, 49, 79, 0.12);
+}
+
+.danmaku-lane {
+  position: relative;
+  min-height: 112px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #25314f, #36456c);
+}
+
+.danmaku {
+  position: absolute;
+  left: 100%;
+  white-space: nowrap;
+  color: #fff;
+  animation: danmaku 6s linear forwards;
+}
+
+@keyframes danmaku {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-140vw);
+  }
+}
+
+.split-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.reward-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.warm-board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.warm-cell {
+  display: grid;
+  place-items: center;
+  min-height: 62px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.warm-cell.active {
+  background: var(--green);
+  color: white;
+}
+
+.multiplayer-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.room-panel {
+  padding: 16px;
+}
+
+.room-panel label {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0;
+  color: var(--muted);
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: white;
+  color: var(--ink);
+}
+
+.room-code {
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.cheer-line {
+  margin: 14px 0;
+}
+
+.cheer-line input {
+  flex: 1 1 260px;
+}
+
+.empty-state {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+@media (max-width: 900px) {
+  .app-header {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-band,
+  .race-shell,
+  .live-bottom,
+  .split-list,
+  .multiplayer-grid,
+  .runner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shortcut-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .race-row {
+    grid-template-columns: 1fr;
+  }
+
+  .support-head,
+  .focus-race,
+  .reward-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

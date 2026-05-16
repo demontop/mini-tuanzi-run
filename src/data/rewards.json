@@ -1,0 +1,18 @@
+{
+  "supportPayout": {
+    "1": 300,
+    "2": 180,
+    "3": 120,
+    "default": 50
+  },
+  "supportRewards": [
+    { "id": "support_1", "requiredSupportCount": 1, "reward": "金币 x1000" },
+    { "id": "support_3", "requiredSupportCount": 3, "reward": "抽奖券 x1" },
+    { "id": "support_5", "requiredSupportCount": 5, "reward": "头像框 x1" }
+  ],
+  "popularityRewards": [
+    { "id": "pop_500", "requiredPopularity": 500, "reward": "金币 x2000" },
+    { "id": "pop_1000", "requiredPopularity": 1000, "reward": "装饰道具 x1" },
+    { "id": "pop_2000", "requiredPopularity": 2000, "reward": "纪念徽章 x1" }
+  ]
+}

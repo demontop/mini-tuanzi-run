@@ -1,0 +1,88 @@
+[
+  {
+    "id": "stable_step",
+    "name": "稳定步伐",
+    "trigger": "BEFORE_ROLL",
+    "description": "本回合骰子只会掷出 2 或 3。",
+    "effect": {
+      "type": "MODIFY_DICE_RANGE",
+      "dice": [2, 3]
+    }
+  },
+  {
+    "id": "comeback_boost",
+    "name": "后追冲刺",
+    "trigger": "AFTER_ROLL",
+    "description": "如果当前排名在后半区，有 35% 概率额外前进 2 格。",
+    "condition": {
+      "type": "RANK_BELOW",
+      "rankPercent": 0.5
+    },
+    "effect": {
+      "type": "EXTRA_STEP",
+      "chance": 0.35,
+      "steps": 2
+    }
+  },
+  {
+    "id": "stack_jump",
+    "name": "叠叠跳",
+    "trigger": "ON_STACKED",
+    "description": "落到其他团子所在格时，额外前进 1 格。",
+    "effect": {
+      "type": "EXTRA_STEP",
+      "steps": 1
+    }
+  },
+  {
+    "id": "teleport_to_front",
+    "name": "向前贴贴",
+    "trigger": "AFTER_MOVE",
+    "description": "有 22% 概率传送到前方最近团子所在格。",
+    "effect": {
+      "type": "TELEPORT_TO_NEAREST_AHEAD",
+      "chance": 0.22
+    }
+  },
+  {
+    "id": "lucky_six",
+    "name": "幸运大步",
+    "trigger": "BEFORE_ROLL",
+    "description": "有机会把本回合骰子变成 2、4 或 6。",
+    "effect": {
+      "type": "RANDOM_WEIGHTED_STEP",
+      "chance": 0.28,
+      "weights": [
+        { "steps": 2, "weight": 5 },
+        { "steps": 4, "weight": 3 },
+        { "steps": 6, "weight": 1 }
+      ]
+    }
+  },
+  {
+    "id": "burst_three",
+    "name": "三连弹跳",
+    "trigger": "AFTER_ROLL",
+    "description": "有 25% 概率把本回合总步数固定为 3。",
+    "effect": {
+      "type": "FIXED_STEP",
+      "chance": 0.25,
+      "steps": 3
+    }
+  },
+  {
+    "id": "leader_brake",
+    "name": "领跑控速",
+    "trigger": "AFTER_ROLL",
+    "description": "如果当前领跑，有 30% 概率少走 1 格。",
+    "condition": {
+      "type": "RANK_ABOVE",
+      "rankPercent": 0.2
+    },
+    "effect": {
+      "type": "EXTRA_STEP",
+      "chance": 0.3,
+      "steps": -1
+    }
+  }
+]
